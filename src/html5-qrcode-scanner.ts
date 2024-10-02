@@ -828,7 +828,7 @@ export class Html5QrcodeScanner {
             $this.persistedDataManager.setLastUsedCameraId(cameraId);
 
             $this.html5Qrcode!.start(
-                cameraId,
+                { facingMode: "environment" },
                 toHtml5QrcodeCameraScanConfig($this.config),
                 $this.qrCodeSuccessCallback!,
                 $this.qrCodeErrorCallback!)
